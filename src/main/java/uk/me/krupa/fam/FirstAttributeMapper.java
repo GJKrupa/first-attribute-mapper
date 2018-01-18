@@ -24,7 +24,7 @@ public class FirstAttributeMapper<InputType,ResultType> {
     }
 
     private ResultType reduceFunction(ResultType accumulator, InputType input, List<ConditionalProcessor<InputType, ResultType>> procs) {
-        return processors.stream().reduce(
+        return procs.stream().reduce(
                 accumulator,
                 (acc, processor) -> processor.reduceWith(acc, input),
                 (a, b) -> b);
