@@ -30,7 +30,7 @@ public class FirstAttributeMapper<InputType,ResultType> {
                 (a, b) -> b);
     }
 
-    interface Function2<Result,Arg1,Arg2> {
+    public interface Function2<Result,Arg1,Arg2> {
         Result apply(Arg1 arg1, Arg2 arg2);
     }
 
